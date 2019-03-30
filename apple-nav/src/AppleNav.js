@@ -3,9 +3,11 @@ import { Link } from 'react-router-dom';
 
 const AppleNav = props => {
     return (
-        props.data.map(eachNav => {
-            <Link to={`/${eachNav.title.toLowerCase()}`}>{eachNav.title}</Link>
-        })
+        <div>
+            {props.data.map(eachNav => {
+                return <Link to={`/${eachNav.title}/`}>{eachNav.title}</Link>
+            })}
+        </div>
     )
 }
 
